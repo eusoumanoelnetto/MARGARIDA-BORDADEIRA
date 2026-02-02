@@ -11,7 +11,6 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('pt');
-  const [mounted, setMounted] = useState(false);
 
   // Restaura idioma do localStorage ao montar
   useEffect(() => {
@@ -19,7 +18,6 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     if (savedLanguage && ['pt', 'en', 'es'].includes(savedLanguage)) {
       setLanguage(savedLanguage);
     }
-    setMounted(true);
   }, []);
 
   // Salva idioma no localStorage quando muda
@@ -27,8 +25,6 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     setLanguage(lang);
     localStorage.setItem('language', lang);
   };
-
-  if (!mounted) return <>{children}</>;
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage }}>

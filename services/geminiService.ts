@@ -1,8 +1,21 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AIResponse } from "../types";
 
-// Initialize Gemini Client
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY;
+let cachedClient: GoogleGenAI | null = null;
+
+const getClient = () => {
+  if (!apiKey) {
+    console.warn("Gemini API key is not configured. Returning fallback response.");
+    return null;
+  }
+
+  if (!cachedClient) {
+    cachedClient = new GoogleGenAI({ apiKey });
+  }
+
+  return cachedClient;
+};
 
 export const generateEmbroideryIdea = async (userInput: string): Promise<AIResponse> => {
   const model = "gemini-3-flash-preview";
@@ -21,8 +34,23 @@ export const generateEmbroideryIdea = async (userInput: string): Promise<AIRespo
     Keep the tone elegant, creative, and inspiring. Respond in Portuguese (Brazil).
   `;
 
+  const client = getClient();
+  if (!client) {
+    return {
+      suggestion:
+        "Um bastidor delicado com composição botânica: ramos de eucalipto em verde musgo, pequenas margaridas creme e detalhes em ouro velho formando um arco que envolve o nome desejado em caligrafia cursiva.",
+      colorPalette: [
+        { name: "Verde Musgo", hex: "#4A5D4F" },
+        { name: "Creme Linho", hex: "#F5F2EB" },
+        { name: "Rosa Chá", hex: "#E6C9C9" },
+        { name: "Dourado Fio", hex: "#C6A665" }
+      ],
+      stitchTypes: ["Ponto cheio", "Ponto margarida", "Ponto haste"]
+    };
+  }
+
   try {
-    const response = await ai.models.generateContent({
+    const response = await client.models.generateContent({
       model: model,
       contents: prompt,
       config: {
