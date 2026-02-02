@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ShoppingBag } from 'lucide-react';
+import LanguageSelector from './LanguageSelector';
+import { useTranslation } from '../hooks/useTranslation';
 
 interface NavbarProps {
   onNavigate: (page: 'home' | 'order' | 'workshops' | 'privacy' | 'cookies') => void;
@@ -9,6 +11,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,14 +38,14 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
     : 'bg-forest-900 text-linen hover:bg-rose-500';
 
   const navLinks = [
-    { name: 'O Ateliê', target: '#gallery', type: 'anchor' },
+    { name: t.navbar.atelier, target: '#gallery', type: 'anchor' },
     { 
-      name: 'Aulas & Agenda', 
+      name: t.navbar.workshops, 
       target: 'workshops', 
       type: 'page',
       badge: true
     },
-    { name: 'A Bordadeira', target: '#about', type: 'anchor' },
+    { name: t.navbar.about, target: '#about', type: 'anchor' },
     // "Assistente IA" removido conforme solicitado
   ];
 
@@ -119,12 +122,13 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
                 )}
               </a>
             ))}
+            <LanguageSelector isTransparent={isTransparent} />
             <button 
               onClick={() => onNavigate('order')}
               className={`${buttonClass} px-8 py-2.5 rounded-full font-serif italic text-lg transition-all duration-500 flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5`}
             >
               <ShoppingBag size={18} className={isTransparent ? 'text-forest-700' : 'text-gold-400'} />
-              Encomendar
+              {t.navbar.order}
             </button>
           </div>
 
@@ -158,6 +162,9 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               )}
             </a>
           ))}
+          <div className="pt-2">
+            <LanguageSelector isTransparent={false} />
+          </div>
            <button 
               onClick={() => {
                 setIsOpen(false);
@@ -166,7 +173,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               className="mt-6 w-full text-center bg-forest-900 text-white px-5 py-4 rounded-xl font-serif text-xl shadow-lg flex justify-center items-center gap-2"
             >
               <ShoppingBag size={20} className="text-gold-400" />
-              Fazer Orçamento
+              {t.navbar.orderMobile}
             </button>
         </div>
       </div>

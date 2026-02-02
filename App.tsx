@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { LanguageProvider } from './contexts/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Gallery from './components/Gallery';
@@ -48,22 +49,24 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-linen relative">
-      <Navbar onNavigate={handleNavigate} currentPage={currentPage} />
-      
-      {renderPage()}
-      
-      {/* Footer is rendered inside Home content, or separately for pages? 
-          Correction: Contact (Footer) is inside Home switch case above.
-          However, other pages usually need a footer too. 
-          Let's move Contact outside to be global, OR keep it per page if we want specific layouts.
-          For this app structure, adding Contact to other pages makes sense for navigation.
-      */}
-      {currentPage !== 'home' && <Contact onNavigate={handleNavigate} />}
+    <LanguageProvider>
+      <div className="min-h-screen bg-linen relative">
+        <Navbar onNavigate={handleNavigate} currentPage={currentPage} />
+        
+        {renderPage()}
+        
+        {/* Footer is rendered inside Home content, or separately for pages? 
+            Correction: Contact (Footer) is inside Home switch case above.
+            However, other pages usually need a footer too. 
+            Let's move Contact outside to be global, OR keep it per page if we want specific layouts.
+            For this app structure, adding Contact to other pages makes sense for navigation.
+        */}
+        {currentPage !== 'home' && <Contact onNavigate={handleNavigate} />}
 
-      <BackToTop />
-      <CookieConsent />
-    </div>
+        <BackToTop />
+        <CookieConsent />
+      </div>
+    </LanguageProvider>
   );
 }
 
