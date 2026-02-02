@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 text-center px-4 w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full pb-20">
+      <div className="relative z-20 text-center px-4 w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full pt-28 md:pt-32 pb-20">
         
         <div className="animate-fade-in-up space-y-6 md:space-y-8 lg:space-y-10 flex flex-col items-center">
           {/* Badge Moderno */}
