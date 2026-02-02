@@ -24,14 +24,14 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="relative z-20 text-center px-4 w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full pt-28 md:pt-32 pb-20">
         
-        <div className="animate-fade-in-up space-y-6 md:space-y-8 lg:space-y-10 flex flex-col items-center">
+        <div className="animate-fade-in-up space-y-6 md:space-y-8 lg:space-y-12 flex flex-col items-center">
           {/* Badge Moderno */}
           <span className="inline-flex items-center gap-2 py-2 px-6 border border-linen/20 rounded-full bg-white/5 backdrop-blur-md text-linen/90 text-xs md:text-sm font-sans tracking-[0.2em] uppercase shadow-lg hover:bg-white/10 transition-colors cursor-default">
             <Sparkles size={12} className="text-gold-400" />
             Arte Têxtil por Paula
           </span>
           
-          <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl 2xl:text-[11rem] text-linen font-serif leading-[0.9] drop-shadow-2xl tracking-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-[10rem] text-linen font-serif leading-[0.9] drop-shadow-2xl tracking-tight">
             Poesia feita <br />
             <span className="font-script text-rose-300 relative inline-block mt-2 md:mt-0">
               à mão
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
             </span>
           </h1>
 
-          <p className="text-lg md:text-2xl lg:text-3xl 2xl:text-4xl text-linen/95 max-w-xs md:max-w-3xl lg:max-w-5xl mx-auto font-serif italic font-light drop-shadow-lg leading-relaxed px-4">
+          <p className="text-lg md:text-2xl lg:text-[28px] 2xl:text-[34px] text-linen/95 max-w-xs md:max-w-3xl lg:max-w-4xl mx-auto font-serif italic font-light drop-shadow-lg leading-relaxed px-4">
             "Onde cada ponto conta uma história e cada linha eterniza uma memória."
           </p>
         </div>
