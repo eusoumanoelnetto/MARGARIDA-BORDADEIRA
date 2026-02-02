@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { GalleryItem } from '../types';
 import { ShoppingBag, X, ExternalLink, Heart } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 // Dados atualizados com descrições poéticas e detalhadas
 const galleryItems: GalleryItem[] = [
@@ -70,6 +71,7 @@ const galleryItems: GalleryItem[] = [
 
 const Gallery: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
+  const { t } = useTranslation();
 
   return (
     <section id="gallery" className="py-24 relative bg-linen">
@@ -78,10 +80,10 @@ const Gallery: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <span className="font-script text-3xl text-rose-500 block mb-2">Loja & Portfolio</span>
-          <h2 className="font-serif text-5xl md:text-6xl text-forest-900 mb-6">Galeria de Pontos</h2>
+          <span className="font-script text-3xl text-rose-500 block mb-2">{t.gallery.title}</span>
+          <h2 className="font-serif text-5xl md:text-6xl text-forest-900 mb-6">{t.gallery.title}</h2>
           <p className="text-forest-700 font-serif italic text-xl max-w-2xl mx-auto">
-            Peças disponíveis para pronta entrega e inspirações para suas encomendas personalizadas.
+            {t.gallery.subtitle}
           </p>
         </div>
 
@@ -104,7 +106,7 @@ const Gallery: React.FC = () => {
                 <div className="absolute inset-0 bg-forest-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-full text-forest-900 font-serif italic flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                         {item.shopUrl ? <ShoppingBag size={18} /> : <Heart size={18} />}
-                        <span>{item.shopUrl ? 'Ver Detalhes' : 'Ver Arte'}</span>
+                        <span>{t.gallery.viewDetails}</span>
                     </div>
                 </div>
               </div>
@@ -186,7 +188,7 @@ const Gallery: React.FC = () => {
                                 className="w-full bg-forest-900 text-linen py-4 rounded-sm font-sans text-sm font-bold uppercase tracking-widest hover:bg-rose-500 transition-all flex items-center justify-center gap-3 group shadow-lg"
                             >
                                 <ShoppingBag size={18} className="text-gold-400 group-hover:text-white transition-colors" />
-                                Comprar na Loja
+                                {t.gallery.buyNow}
                             </a>
                         ) : (
                             <a 
@@ -195,7 +197,7 @@ const Gallery: React.FC = () => {
                                 rel="noreferrer"
                                 className="w-full bg-rose-500 text-white py-4 rounded-sm font-sans text-sm font-bold uppercase tracking-widest hover:bg-rose-600 transition-all flex items-center justify-center gap-3 shadow-lg"
                             >
-                                Encomendar Similar
+                                {t.gallery.inquire}
                             </a>
                         )}
                         

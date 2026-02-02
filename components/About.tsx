@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from '../hooks/useTranslation';
 
 const About: React.FC = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="about" className="py-24 bg-[#F0EBE0] relative overflow-hidden">
         {/* Background Texture */}
@@ -28,27 +31,27 @@ const About: React.FC = () => {
           {/* Text Side */}
           <div className="w-full md:w-1/2 space-y-8 text-center md:text-left">
             <div>
-                <span className="font-script text-4xl text-rose-500">Olá, eu sou a</span>
-                <h2 className="font-serif text-5xl md:text-6xl text-forest-900 mt-2">Paula Brasil</h2>
+                <span className="font-script text-4xl text-rose-500">{t.about.greeting}</span>
+                <h2 className="font-serif text-5xl md:text-6xl text-forest-900 mt-2">{t.about.name}</h2>
             </div>
             
             <div className="space-y-6 font-serif text-xl text-forest-800/80 leading-relaxed">
               <p>
-                Bem-vindo ao meu mundo de linhas e texturas. O <span className="italic text-forest-900 font-semibold">Margarida Bordada</span> nasceu da necessidade de desacelerar em um mundo que não para.
+                {t.about.intro} <span className="italic text-forest-900 font-semibold">{t.about.brandName}</span> {t.about.introEnd}
               </p>
               <p>
-                Acredito que o bordado é uma forma de linguagem. Seja para eternizar o buquê do seu casamento, anunciar a chegada de um bebê ou presentear alguém amado, cada ponto é feito manualmente com intenção e calma.
+                {t.about.belief}
               </p>
             </div>
 
             <div className="border-t border-forest-900/10 pt-8 mt-8 grid grid-cols-2 gap-8">
               <div>
-                <h4 className="font-sans text-xs uppercase tracking-widest text-forest-500 mb-2">Técnica</h4>
-                <p className="font-serif text-2xl text-forest-900">Bordado Livre</p>
+                <h4 className="font-sans text-xs uppercase tracking-widest text-forest-500 mb-2">{t.about.technique}</h4>
+                <p className="font-serif text-2xl text-forest-900">{t.about.techniqueValue}</p>
               </div>
               <div>
-                <h4 className="font-sans text-xs uppercase tracking-widest text-forest-500 mb-2">Inspiração</h4>
-                <p className="font-serif text-2xl text-forest-900">Natureza & Memória</p>
+                <h4 className="font-sans text-xs uppercase tracking-widest text-forest-500 mb-2">{t.about.inspiration}</h4>
+                <p className="font-serif text-2xl text-forest-900">{t.about.inspirationValue}</p>
               </div>
             </div>
           </div>

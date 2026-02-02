@@ -1,11 +1,13 @@
 import React from 'react';
 import { Instagram, Facebook, Send, Mail, Heart } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 interface ContactProps {
     onNavigate: (page: 'home' | 'order' | 'workshops' | 'privacy' | 'cookies') => void;
 }
 
 const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
+  const { t } = useTranslation();
 
   const handleLinkClick = (e: React.MouseEvent, target: string) => {
     e.preventDefault();
@@ -42,12 +44,12 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
             </div>
 
             <div className="mb-16">
-            <span className="font-script text-4xl text-rose-400 mb-4 block">Vamos conversar?</span>
+            <span className="font-script text-4xl text-rose-400 mb-4 block">{t.contact.greeting}</span>
             <h2 className="font-serif text-5xl md:text-6xl mb-8 leading-tight">
-                Transforme sua memória<br/>em bordado.
+                {t.contact.title}<br/>{t.contact.titleEnd}
             </h2>
             <p className="text-linen/60 text-xl font-serif max-w-xl mx-auto mb-12 italic">
-                A agenda está aberta para novas histórias. Clique abaixo para iniciarmos seu projeto personalizado.
+                {t.contact.description}
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-6">
@@ -56,7 +58,7 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
                 className="bg-rose-500 hover:bg-rose-600 text-white px-10 py-4 rounded-full font-serif text-xl italic transition-all shadow-lg shadow-rose-900/50 flex items-center justify-center gap-3 hover:-translate-y-1"
                 >
                 <Send size={20} className="not-italic" />
-                Chamar no WhatsApp
+                {t.contact.whatsapp}
                 </a>
                 <a 
                 href="https://instagram.com/margaridabordada"
@@ -65,7 +67,7 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
                 className="border border-linen/20 hover:bg-linen/5 text-linen px-10 py-4 rounded-full font-serif text-xl italic transition-all flex items-center justify-center gap-3"
                 >
                 <Instagram size={20} className="not-italic" />
-                @margaridabordada
+                {t.contact.instagram}
                 </a>
             </div>
             </div>
@@ -74,9 +76,9 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
         {/* Footer Navigation Links */}
         <div className="mb-12 border-b border-linen/10 pb-8">
             <ul className="flex flex-wrap justify-center gap-8 font-serif text-lg text-linen/60">
-                <li><a href="#gallery" onClick={(e) => handleLinkClick(e, '#gallery')} className="hover:text-rose-300 transition-colors">Galeria</a></li>
-                <li><a href="#" onClick={(e) => handleLinkClick(e, 'workshops')} className="hover:text-rose-300 transition-colors text-rose-200">Aulas & Workshops</a></li>
-                <li><a href="#about" onClick={(e) => handleLinkClick(e, '#about')} className="hover:text-rose-300 transition-colors">Sobre</a></li>
+                <li><a href="#gallery" onClick={(e) => handleLinkClick(e, '#gallery')} className="hover:text-rose-300 transition-colors">{t.contact.gallery}</a></li>
+                <li><a href="#" onClick={(e) => handleLinkClick(e, 'workshops')} className="hover:text-rose-300 transition-colors text-rose-200">{t.contact.workshops}</a></li>
+                <li><a href="#about" onClick={(e) => handleLinkClick(e, '#about')} className="hover:text-rose-300 transition-colors">{t.contact.about}</a></li>
             </ul>
         </div>
 
@@ -89,9 +91,9 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
              
              {/* Policy Links - Only Visible in Footer */}
              <div className="flex gap-4 text-xs font-sans text-linen/30 uppercase tracking-widest">
-                <a href="#" onClick={(e) => handleLinkClick(e, 'privacy')} className="hover:text-rose-300 transition-colors">Pol. Privacidade</a>
+                <a href="#" onClick={(e) => handleLinkClick(e, 'privacy')} className="hover:text-rose-300 transition-colors">{t.contact.privacy}</a>
                 <span>|</span>
-                <a href="#" onClick={(e) => handleLinkClick(e, 'cookies')} className="hover:text-rose-300 transition-colors">Cookies</a>
+                <a href="#" onClick={(e) => handleLinkClick(e, 'cookies')} className="hover:text-rose-300 transition-colors">{t.contact.cookies}</a>
              </div>
           </div>
           
@@ -122,13 +124,13 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
 
           <div className="text-linen/40 font-serif italic text-lg flex flex-col sm:flex-row items-center justify-center gap-x-2 gap-y-1 order-3 text-center w-full lg:w-auto lg:ml-auto lg:pr-16">
             <div className="flex items-center gap-2 whitespace-nowrap">
-                <span>Feito à mão com</span>
+                <span>{t.footer.madeBy}</span>
                 <Heart size={14} className="text-rose-500 fill-rose-500 shrink-0" />
-                <span>por Paula</span>
+                <span>Paula</span>
             </div>
             
             <div className="flex items-center gap-1.5 whitespace-nowrap">
-                <span>pela</span>
+                <span>{t.footer.by}</span>
                 <a 
                   href="https://www.rebrandly.com/aeagledigital" 
                   target="_blank" 

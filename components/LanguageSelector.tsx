@@ -9,9 +9,9 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ isTransparent = fal
   const { language, setLanguage } = useLanguage();
   
   const languages: { code: Language; name: string; flag: string }[] = [
-    { code: 'pt', name: 'PT', flag: '🇧🇷' },
-    { code: 'en', name: 'EN', flag: '🇬🇧' },
-    { code: 'es', name: 'ES', flag: '🇪🇸' },
+    { code: 'pt', name: 'PT', flag: 'PT' },
+    { code: 'en', name: 'EN', flag: 'EN' },
+    { code: 'es', name: 'ES', flag: 'ES' },
   ];
 
   const containerClass = isTransparent
