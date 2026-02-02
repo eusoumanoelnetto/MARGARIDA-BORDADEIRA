@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     const isProd = mode === 'production';
-    const repoName = 'margarida-bordadeira'; // Change if your repo has a different name
+    const repoName = 'MARGARIDA-BORDADEIRA'; // Must match GitHub repo name exactly (case-sensitive)
     
     return {
       base: isProd ? `/${repoName}/` : '/',
