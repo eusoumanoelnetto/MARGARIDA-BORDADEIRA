@@ -120,7 +120,7 @@ const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
              </a>
           </div>
 
-          <div className="text-linen/40 font-serif italic text-lg flex flex-col sm:flex-row items-center justify-center gap-x-2 gap-y-1 order-3 text-center w-full lg:w-auto">
+          <div className="text-linen/40 font-serif italic text-lg flex flex-col sm:flex-row items-center justify-center gap-x-2 gap-y-1 order-3 text-center w-full lg:w-auto lg:ml-auto lg:pr-16">
             <div className="flex items-center gap-2 whitespace-nowrap">
                 <span>Feito à mão com</span>
                 <Heart size={14} className="text-rose-500 fill-rose-500 shrink-0" />
