@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 text-center px-5 sm:px-6 w-full max-w-7xl mx-auto flex h-full flex-col items-center pt-32 md:pt-36 pb-24 md:pb-8">
+      <div className="relative z-20 text-center px-5 sm:px-6 w-full max-w-7xl mx-auto flex h-full flex-col items-center pt-32 md:pt-28 pb-24 md:pb-8">
         
         <div className="flex w-full flex-1 flex-col items-center justify-center">
           <div className="animate-fade-in-up space-y-8 md:space-y-9 lg:space-y-12 flex flex-col items-center">
