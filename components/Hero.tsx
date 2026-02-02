@@ -45,18 +45,18 @@ const Hero: React.FC = () => {
             "Onde cada ponto conta uma história e cada linha eterniza uma memória."
           </p>
         </div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 lg:bottom-12 w-full flex justify-center z-20 pointer-events-none">
-          <div className="animate-bounce duration-[3000ms] pointer-events-auto">
-            <a href="#gallery" className="flex flex-col items-center gap-3 text-linen/70 hover:text-white transition-colors cursor-pointer group">
-                <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] group-hover:tracking-[0.3em] transition-all duration-500 font-medium opacity-80">Explorar Ateliê</span>
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-linen/30 flex items-center justify-center backdrop-blur-sm group-hover:bg-rose-500/20 group-hover:border-rose-300 transition-all shadow-lg">
-                <ArrowDown size={20} strokeWidth={1.5} />
-                </div>
-            </a>
-          </div>
+        {/* Scroll Indicator */}
+        <div className="mt-10 md:mt-12 lg:mt-16 flex justify-center">
+              <a href="#gallery" className="flex flex-col items-center gap-2 text-linen/70 hover:text-white transition-colors cursor-pointer group animate-bounce duration-[2800ms]">
+            <span className="text-[10px] md:text-xs uppercase tracking-[0.18em] group-hover:tracking-[0.28em] transition-all duration-500 font-medium opacity-80">
+              Explorar Ateliê
+            </span>
+            <div className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-linen/30 flex items-center justify-center backdrop-blur-sm group-hover:bg-rose-500/20 group-hover:border-rose-300 transition-all shadow-lg">
+              <ArrowDown size={18} strokeWidth={1.5} />
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   );
