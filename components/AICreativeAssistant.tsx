@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Sparkles, Loader2, Copy, Palette, PenTool, Eraser } from 'lucide-react';
 import { generateEmbroideryIdea } from '../services/geminiService';
 import { AIResponse } from '../types';
+import { useTranslation } from '../hooks/useTranslation';
 
 const AICreativeAssistant: React.FC = () => {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<AIResponse | null>(null);
   const [error, setError] = useState('');
+  const { t } = useTranslation();
 
   const handleGenerate = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,7 +24,7 @@ const AICreativeAssistant: React.FC = () => {
       setResult(data);
     } catch (err) {
       console.error(err);
-      setError('A inspiração está tímida agora. Tente novamente em alguns instantes.');
+      setError(t.aiAssistant.error);
     } finally {
       setLoading(false);
     }
@@ -31,10 +33,11 @@ const AICreativeAssistant: React.FC = () => {
   const copyToClipboard = () => {
     if (result) {
       const colorNames = result.colorPalette.map(c => c.name).join(', ');
-      const text = `Oi Paula! Usei o assistente do site e amei essa ideia:\n\n*Conceito:* ${result.suggestion}\n*Cores:* ${colorNames}\n*Pontos:* ${result.stitchTypes.join(', ')}`;
+      const { intro, concept, colors, stitches } = t.aiAssistant.whatsappPrefill;
+      const text = `${intro}\n\n${concept} ${result.suggestion}\n${colors} ${colorNames}\n${stitches} ${result.stitchTypes.join(', ')}`;
       navigator.clipboard.writeText(text);
       // Feedback visual simples via alert
-      alert('Anotações copiadas! Cole no nosso WhatsApp.');
+      alert(t.aiAssistant.result.copySuccess);
     }
   };
 
@@ -47,9 +50,9 @@ const AICreativeAssistant: React.FC = () => {
             <div className="inline-flex items-center justify-center p-3 bg-rose-50 rounded-full mb-6">
                  <Sparkles className="text-rose-500" size={24} />
             </div>
-          <h2 className="font-serif text-5xl md:text-6xl text-forest-900 mb-6">Sua Ideia, Minhas Mãos</h2>
+          <h2 className="font-serif text-5xl md:text-6xl text-forest-900 mb-6">{t.aiAssistant.title}</h2>
           <p className="text-forest-700 text-xl font-serif max-w-2xl mx-auto italic">
-            Não sabe por onde começar? Conte para minha "Assistente Criativa" (IA) o que você sente, e ela desenhará o conceito com palavras e cores.
+            {t.aiAssistant.subtitle}
           </p>
         </div>
 
@@ -70,7 +73,7 @@ const AICreativeAssistant: React.FC = () => {
             
             <form onSubmit={handleGenerate} className="mb-12 relative z-10">
               <label className="block font-script text-5xl text-forest-900 mb-8 ml-2 drop-shadow-sm opacity-90">
-                Querido diário de bordado...
+                {t.aiAssistant.diaryLabel}
               </label>
               
               {/* Lined Paper Effect Container */}
@@ -88,7 +91,7 @@ const AICreativeAssistant: React.FC = () => {
                 <textarea
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Ex: Quero presentear minha avó com algo que lembre o jardim dela, com cores suaves e talvez um beija-flor..."
+                  placeholder={t.aiAssistant.placeholder}
                   rows={4}
                   className="w-full bg-transparent border-none resize-none focus:ring-0 p-0 text-xl md:text-2xl font-serif text-forest-900/90 leading-[3.5rem] placeholder:text-forest-300 placeholder:italic focus:outline-none"
                   style={{
@@ -104,7 +107,7 @@ const AICreativeAssistant: React.FC = () => {
                         onClick={() => setInput('')}
                         className={`flex items-center gap-2 text-stone-400 hover:text-rose-400 transition-colors font-sans text-xs tracking-widest uppercase ${!input && 'opacity-0 cursor-default'}`}
                     >
-                        <Eraser size={14} /> Limpar
+                        <Eraser size={14} /> {t.aiAssistant.clear}
                     </button>
 
                     <button
@@ -115,11 +118,11 @@ const AICreativeAssistant: React.FC = () => {
                         {loading ? (
                             <>
                                 <Loader2 className="animate-spin" size={20} />
-                                <span className="animate-pulse">Criando...</span>
+                                <span className="animate-pulse">{t.aiAssistant.submit.loading}</span>
                             </>
                         ) : (
                             <>
-                                <span className="relative z-10">Materializar Ideia</span>
+                                <span className="relative z-10">{t.aiAssistant.submit.idle}</span>
                                 <Sparkles size={18} className="text-gold-400 group-hover:text-white transition-colors" />
                             </>
                         )}
@@ -137,7 +140,7 @@ const AICreativeAssistant: React.FC = () => {
 
                   <div className="bg-white p-8 rounded-sm shadow-[0_3px_15px_-3px_rgba(0,0,0,0.1)] border border-stone-100 rotate-1 transition-transform hover:rotate-0">
                       
-                    <h3 className="font-script text-4xl text-rose-600 mb-4 drop-shadow-sm text-center">O Conceito</h3>
+                    <h3 className="font-script text-4xl text-rose-600 mb-4 drop-shadow-sm text-center">{t.aiAssistant.result.title}</h3>
                     <p className="font-serif text-2xl text-forest-900 leading-relaxed font-medium text-center mb-8">
                       "{result.suggestion}"
                     </p>
@@ -145,7 +148,7 @@ const AICreativeAssistant: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-dashed border-stone-300 pt-8">
                         <div className="bg-stone-50 p-4 rounded-lg">
                             <h4 className="font-sans text-xs font-bold uppercase text-forest-600 mb-3 flex items-center gap-2">
-                                <Palette size={14} /> Paleta Sugerida
+                              <Palette size={14} /> {t.aiAssistant.result.paletteTitle}
                             </h4>
                             <div className="flex flex-wrap gap-3">
                                 {result.colorPalette.map((color, idx) => (
@@ -165,7 +168,7 @@ const AICreativeAssistant: React.FC = () => {
 
                         <div className="bg-stone-50 p-4 rounded-lg">
                             <h4 className="font-sans text-xs font-bold uppercase text-forest-600 mb-3 flex items-center gap-2">
-                                <PenTool size={14} /> Pontos Técnicos
+                              <PenTool size={14} /> {t.aiAssistant.result.stitchesTitle}
                             </h4>
                             <div className="flex flex-wrap gap-x-4 gap-y-1">
                                 {result.stitchTypes.map((stitch, idx) => (
@@ -182,7 +185,7 @@ const AICreativeAssistant: React.FC = () => {
                         onClick={copyToClipboard}
                         className="flex items-center gap-2 text-forest-900 border-b border-rose-300 hover:border-rose-600 hover:text-rose-600 transition-all font-sans text-xs uppercase tracking-widest font-bold pb-1"
                         >
-                        <Copy size={14} /> Copiar para Encomenda
+                        <Copy size={14} /> {t.aiAssistant.result.copy}
                         </button>
                     </div>
                   </div>

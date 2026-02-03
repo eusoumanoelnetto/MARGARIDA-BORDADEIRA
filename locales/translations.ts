@@ -33,6 +33,12 @@ export const translations = {
       closeModal: 'Fechar',
       buyNow: 'Comprar',
       inquire: 'Consultar',
+      viewMoreInstagram: 'Ver mais no Instagram @margaridabordada',
+      securePurchase: {
+        prefix: 'Compra Segura via',
+        whatsapp: 'WhatsApp',
+        nuvemshop: 'Nuvemshop',
+      },
       categories: {
         all: 'Todas',
         bastidor: 'Bastidor',
@@ -42,7 +48,269 @@ export const translations = {
         delicado: 'Delicado',
         processo: 'Processo',
         textura: 'Textura',
-      }
+      },
+    },
+    aiAssistant: {
+      title: 'Sua Ideia, Minhas Mãos',
+      subtitle: 'Não sabe por onde começar? Conte para minha "Assistente Criativa" (IA) o que você sente, e ela desenhará o conceito com palavras e cores.',
+      diaryLabel: 'Querido diário de bordado...',
+      placeholder: 'Ex: Quero presentear minha avó com algo que lembre o jardim dela, com cores suaves e talvez um beija-flor...',
+      clear: 'Limpar',
+      submit: {
+        idle: 'Materializar Ideia',
+        loading: 'Criando...',
+      },
+      error: 'A inspiração está tímida agora. Tente novamente em alguns instantes.',
+      result: {
+        title: 'O Conceito',
+        paletteTitle: 'Paleta Sugerida',
+        stitchesTitle: 'Pontos Técnicos',
+        copy: 'Copiar para Encomenda',
+        copySuccess: 'Anotações copiadas! Cole no nosso WhatsApp.',
+      },
+      whatsappPrefill: {
+        intro: 'Oi Paula! Usei o assistente do site e amei essa ideia:',
+        concept: '*Conceito:*',
+        colors: '*Cores:*',
+        stitches: '*Pontos:*',
+      },
+    },
+    workshopTeaser: {
+      badge: 'Últimas Vagas',
+      title: 'Workshop: Sonho do Artesão',
+      dateLabel: 'Quando',
+      dateValue: '12 de Abril',
+      locationLabel: 'Onde',
+      locationValue: 'Centro Histórico',
+      mobileDate: '12/04',
+      mobileLocation: 'Centro',
+      cta: 'Ver Agenda',
+      close: 'Fechar aviso',
+    },
+    workshopsHome: {
+      badge: 'Agenda 2026',
+      heading: 'Ensino & Compartilho',
+      subtitle: 'Mais do que técnica, o bordado é terapia. Venha descomplicar os pontos em encontros presenciais cheios de afeto.',
+      ticket: {
+        ribbon: 'Próxima Turma',
+        highlightTitleLine1: 'Iniciação ao',
+        highlightTitleLine2: 'Bordado Livre',
+        statusLabel: 'Local Confirmado',
+        statusBadge: 'Vagas Limitadas',
+        title: 'O Sonho do Artesão',
+        description: 'Um espaço mágico para criarmos juntas.',
+        details: {
+          whenLabel: 'Quando',
+          whenValue: 'Sábado, 20 de Abril',
+          scheduleLabel: 'Horário',
+          scheduleValue: 'Das 14h às 18h',
+        },
+        includesTitle: 'O que está incluso:',
+        includes: ['Kit completo', 'Apostila digital', 'Risco exclusivo', 'Coffee break'],
+        whatsappMessage: 'Olá! Gostaria de me inscrever no Workshop no Sonho do Artesão.',
+        cta: 'Garantir minha vaga',
+      },
+      footer: {
+        prompt: 'Quer levar o workshop para sua cidade?',
+        link: 'Entre em contato',
+      },
+    },
+    orderPage: {
+      badge: 'Orçamento Personalizado',
+      title: 'Vamos criar algo',
+      highlight: 'único?',
+      intro: 'Cada bordado é uma jornada. Preencha os detalhes abaixo para que eu possa entender sua visão e transformar sua memória em arte têxtil.',
+      cards: {
+        references: {
+          title: 'Envie Referências',
+          description: 'Fotos, cores ou a história que você quer contar.',
+        },
+        timeline: {
+          title: 'Prazo de Produção',
+          description: 'Peças exclusivas levam de 15 a 30 dias para ficarem prontas.',
+        },
+      },
+      quote: '"O amor está nos detalhes."',
+      form: {
+        title: 'Detalhes do Pedido',
+        nameLabel: 'Seu Nome',
+        namePlaceholder: 'Como prefere ser chamado?',
+        contactLabel: 'WhatsApp / Email',
+        contactPlaceholder: '(00) 00000-0000',
+        typeLabel: 'Tipo de Peça',
+        typeOptions: {
+          bastidor: 'Bastidor Decorativo',
+          portaAlianca: 'Porta Alianças',
+          flamula: 'Flâmula',
+          roupa: 'Personalização em Roupa',
+          outro: 'Outro (Descrever)',
+        },
+        dateLabel: 'Data Limite (Opcional)',
+        uploadLabel: 'Referência Visual (Opcional)',
+        uploadPrompt: 'Clique para adicionar uma foto',
+        uploadSelected: 'Imagem selecionada',
+        uploadHint: '* A imagem deverá ser enviada no chat do WhatsApp após clicar em solicitar.',
+        ideaLabel: 'Sua Ideia',
+        ideaPlaceholder: 'Conte um pouco sobre o que você imagina. Cores, elementos, frases...',
+        ideaHint: 'Dica: Use a Assistente Criativa na Home se precisar de ajuda!',
+        submit: 'Solicitar Orçamento',
+        responseTime: 'Resposta em até 24h úteis',
+        whatsapp: {
+          greeting: 'Olá Paula! Gostaria de fazer um orçamento.',
+          nameLabel: '*Nome:*',
+          typeLabel: '*Tipo:*',
+          dateLabel: '*Data Ideal:*',
+          ideaLabel: '*Ideia:*',
+          attachment: '📸 *Referência:* Tenho uma imagem para enviar ({fileName}). Vou anexá-la aqui no chat!',
+        },
+      },
+    },
+    workshopsPage: {
+      eyebrow: 'Education & Community',
+      title: {
+        first: 'Diário de',
+        highlight: 'Aulas',
+      },
+      quote: '"Ensinar é bordar o conhecimento no coração do outro."',
+      calendar: {
+        month: 'Abril',
+        year: '2026',
+        status: 'Agenda Aberta',
+        weekdays: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
+        legend: {
+          inPerson: 'Workshops Presenciais',
+          special: 'Eventos Especiais',
+          online: 'Mentoria Online',
+        },
+        events: [
+          { day: 5, title: 'Iniciação', type: 'workshop' },
+          { day: 12, title: 'Sonho do Artesão', type: 'special' },
+          { day: 20, title: 'Pontos 3D', type: 'workshop' },
+          { day: 26, title: 'Mentoria', type: 'online' },
+        ],
+      },
+      highlight: {
+        badge: 'Destaque do Mês',
+        title: 'O Sonho do Artesão',
+        subtitle: 'Edição Especial de Abril',
+        description: 'Um encontro mágico em um local histórico. Vamos aprender a bordar flores tridimensionais enquanto compartilhamos histórias e um café colonial inesquecível.',
+        date: '12 de Abril, Sábado',
+        time: '14h às 18h',
+        location: 'Espaço Sonho do Artesão - Centro',
+        cta: 'Garantir minha vaga',
+        whatsappMessage: 'Quero saber mais sobre o Sonho do Artesão!',
+      },
+      otherClassesTitle: 'Outras Turmas',
+      otherClasses: [
+        {
+          title: 'Iniciação ao Bordado Livre',
+          description: 'Ideal para quem nunca pegou na agulha.',
+          chips: ['05/04 - Presencial', 'Material Incluso'],
+          imageAlt: 'Iniciantes',
+        },
+        {
+          title: 'Botânica e Texturas 3D',
+          description: 'Para quem já borda e quer evoluir.',
+          chips: ['20/04 - Presencial', 'Nível Intermediário'],
+          imageAlt: 'Pontos 3D',
+        },
+      ],
+      beyond: {
+        eyebrow: 'Além do Ateliê',
+        title: 'Leve a Margarida para o seu mundo',
+        description: 'Crio experiências manuais personalizadas para marcas, empresas e eventos em qualquer lugar do Brasil.',
+        cards: {
+          corporate: {
+            title: 'Wellness & Corporate',
+            description: 'Workshops de descompressão criativa para equipes. Foco em saúde mental e team building através do fazer manual.',
+          },
+          retail: {
+            title: 'Brand Experience',
+            description: 'Ativações em lojas, lançamentos de coleção e personalização ao vivo para encantar seus clientes.',
+          },
+          travel: {
+            title: 'Tour Margarida',
+            description: 'Quer levar o curso para sua cidade? Organize uma turma e eu levo todo o material e conhecimento.',
+          },
+        },
+        cta: 'Solicitar Proposta Comercial',
+      },
+      faq: {
+        title: 'Dúvidas Frequentes',
+        questions: [
+          {
+            question: 'Preciso levar material?',
+            answer: 'Não! Nos cursos presenciais, todo o kit está incluso e é seu para levar para casa.',
+          },
+          {
+            question: 'E se eu faltar?',
+            answer: 'Avisando com 48h de antecedência, conseguimos reagendar para a próxima turma disponível.',
+          },
+        ],
+      },
+    },
+    privacyPage: {
+      title: 'Política de Privacidade',
+      updatedAt: 'Última atualização: Abril de 2026',
+      intro: 'A sua privacidade é tão importante quanto a qualidade dos nossos bordados. Na Margarida Bordada, tratamos seus dados com transparência, respeito e cuidado.',
+      sections: [
+        {
+          title: '1. Coleta de Informações',
+          body: 'Coletamos apenas as informações essenciais para processar seus pedidos e orçamentos: nome, contato (telefone/WhatsApp) e detalhes fornecidos voluntariamente nos formulários de orçamento. Não compartilhamos seus dados com terceiros para fins de marketing.',
+        },
+        {
+          title: '2. Uso das Informações',
+          body: 'Seus dados são utilizados exclusivamente para:',
+          list: [
+            'Responder às suas solicitações de orçamento.',
+            'Processar e enviar suas encomendas.',
+            'Comunicar atualizações sobre status do pedido ou novidades (caso tenha optado por receber).',
+          ],
+        },
+        {
+          title: '3. Assistente Criativa (IA)',
+          body: 'Ao utilizar nossa ferramenta de Assistente Criativa, o texto inserido é processado para gerar sugestões. Não armazenamos o conteúdo das suas ideias de forma permanente associada à sua identidade pessoal.',
+        },
+        {
+          title: '4. Seus Direitos',
+          body: 'Você tem o direito de solicitar a exclusão ou alteração dos seus dados a qualquer momento. Basta entrar em contato através do email contato@margaridabordada.com.',
+        },
+      ],
+      signature: 'Paula Brasil',
+      footer: 'Margarida Bordada © Todos os direitos reservados',
+    },
+    cookiesPage: {
+      title: 'Política de Cookies',
+      eyebrow: 'Transparência Digital',
+      intro: 'Este site utiliza cookies para garantir que você tenha a melhor experiência possível. Cookies são pequenos arquivos de texto armazenados no seu dispositivo quando você visita nosso ateliê digital.',
+      sections: [
+        {
+          title: 'Que tipos de cookies usamos?',
+          items: [
+            {
+              title: 'Essenciais',
+              description: 'Necessários para o site funcionar corretamente, como lembrar suas preferências de navegação básica.',
+            },
+            {
+              title: 'Desempenho e Análise',
+              description: 'Nos ajudam a entender como os visitantes interagem com o site (quais páginas são mais visitadas), de forma anônima, para que possamos melhorar sempre.',
+            },
+          ],
+        },
+        {
+          title: 'Gerenciamento',
+          body: 'Você pode optar por desativar os cookies nas configurações do seu navegador a qualquer momento. No entanto, observe que algumas funcionalidades do site (como o Assistente Criativo) podem não funcionar perfeitamente sem eles.',
+        },
+      ],
+      footer: 'Margarida Bordada - Feito à mão e com carinho',
+    },
+    cookieBanner: {
+      message: 'Usamos cookies para deixar sua experiência mais doce.',
+      detail: 'Ao continuar navegando, você concorda com nossa Política de Privacidade e o uso de cookies para melhorar o desempenho do site.',
+      action: 'Aceitar e Continuar',
+    },
+    backToTop: {
+      ariaLabel: 'Voltar ao topo',
     },
     contact: {
       greeting: 'Vamos conversar?',
@@ -60,7 +328,7 @@ export const translations = {
     footer: {
       madeBy: 'Feito à mão com',
       by: 'pela',
-    }
+    },
   },
   en: {
     navbar: {
@@ -96,6 +364,12 @@ export const translations = {
       closeModal: 'Close',
       buyNow: 'Buy Now',
       inquire: 'Inquire',
+      viewMoreInstagram: 'See more on Instagram @margaridabordada',
+      securePurchase: {
+        prefix: 'Secure checkout via',
+        whatsapp: 'WhatsApp',
+        nuvemshop: 'Nuvemshop',
+      },
       categories: {
         all: 'All',
         bastidor: 'Hoop',
@@ -105,13 +379,275 @@ export const translations = {
         delicado: 'Delicate',
         processo: 'Process',
         textura: 'Texture',
-      }
+      },
+    },
+    aiAssistant: {
+      title: 'Your Vision, My Hands',
+      subtitle: 'Not sure where to begin? Tell my "Creative Assistant" (AI) what you feel and she will sketch the concept with words and colors.',
+      diaryLabel: 'Dear embroidery journal...',
+      placeholder: 'E.g.: I want to gift my grandmother something that feels like her garden, with soft colors and maybe a hummingbird...',
+      clear: 'Clear',
+      submit: {
+        idle: 'Bring Idea to Life',
+        loading: 'Creating...',
+      },
+      error: 'Inspiration is shy right now. Try again in a moment.',
+      result: {
+        title: 'The Concept',
+        paletteTitle: 'Suggested Palette',
+        stitchesTitle: 'Stitch Techniques',
+        copy: 'Copy for Commission',
+        copySuccess: 'Notes copied! Paste them in our WhatsApp.',
+      },
+      whatsappPrefill: {
+        intro: 'Hi Paula! I used the website assistant and loved this idea:',
+        concept: '*Concept:*',
+        colors: '*Colors:*',
+        stitches: '*Stitches:*',
+      },
+    },
+    workshopTeaser: {
+      badge: 'Last Seats',
+      title: 'Workshop: Artisan Dream',
+      dateLabel: 'When',
+      dateValue: 'April 12',
+      locationLabel: 'Where',
+      locationValue: 'Historic Downtown',
+      mobileDate: '04/12',
+      mobileLocation: 'Downtown',
+      cta: 'View Schedule',
+      close: 'Close notice',
+    },
+    workshopsHome: {
+      badge: '2026 Schedule',
+      heading: 'Teach & Share',
+      subtitle: 'More than technique, embroidery is therapy. Join affectionate in-person gatherings to untangle stitches together.',
+      ticket: {
+        ribbon: 'Next Group',
+        highlightTitleLine1: 'Freehand',
+        highlightTitleLine2: 'Embroidery 101',
+        statusLabel: 'Venue Confirmed',
+        statusBadge: 'Limited Seats',
+        title: 'The Artisan’s Dream',
+        description: 'A magical space for us to create together.',
+        details: {
+          whenLabel: 'When',
+          whenValue: 'Saturday, April 20',
+          scheduleLabel: 'Schedule',
+          scheduleValue: '2 p.m. to 6 p.m.',
+        },
+        includesTitle: 'What’s included:',
+        includes: ['Full kit', 'Digital booklet', 'Exclusive pattern', 'Coffee break'],
+        whatsappMessage: 'Hi! I’d love to join the Artisan’s Dream workshop.',
+        cta: 'Save my seat',
+      },
+      footer: {
+        prompt: 'Want to host it in your city?',
+        link: 'Get in touch',
+      },
+    },
+    orderPage: {
+      badge: 'Custom Quote',
+      title: 'Let’s craft something',
+      highlight: 'unique?',
+      intro: 'Every embroidery is a journey. Fill the details below so I can understand your vision and turn your memory into textile art.',
+      cards: {
+        references: {
+          title: 'Send References',
+          description: 'Photos, colors, or the story you want to tell.',
+        },
+        timeline: {
+          title: 'Production Timeline',
+          description: 'Exclusive pieces take 15 to 30 days to be completed.',
+        },
+      },
+      quote: '"Love lives in the details."',
+      form: {
+        title: 'Order Details',
+        nameLabel: 'Your Name',
+        namePlaceholder: 'How should I call you?',
+        contactLabel: 'WhatsApp / Email',
+        contactPlaceholder: '(00) 00000-0000',
+        typeLabel: 'Piece Type',
+        typeOptions: {
+          bastidor: 'Decorative Hoop',
+          portaAlianca: 'Ring Bearer Hoop',
+          flamula: 'Pennant Banner',
+          roupa: 'Garment Personalization',
+          outro: 'Other (Describe)',
+        },
+        dateLabel: 'Deadline (Optional)',
+        uploadLabel: 'Visual Reference (Optional)',
+        uploadPrompt: 'Click to add a photo',
+        uploadSelected: 'Image selected',
+        uploadHint: '* Send the file via WhatsApp chat after you click to request.',
+        ideaLabel: 'Your Idea',
+        ideaPlaceholder: 'Tell me about the colors, elements, words you imagine...',
+        ideaHint: 'Tip: Use the Creative Assistant on the home page if you need inspiration!',
+        submit: 'Request Quote',
+        responseTime: 'Reply within one business day',
+        whatsapp: {
+          greeting: 'Hi Paula! I’d like to request a quote.',
+          nameLabel: '*Name:*',
+          typeLabel: '*Piece:*',
+          dateLabel: '*Ideal date:*',
+          ideaLabel: '*Idea:*',
+          attachment: '📸 *Reference:* I have an image to send ({fileName}). I’ll attach it here in the chat!',
+        },
+      },
+    },
+    workshopsPage: {
+      eyebrow: 'Education & Community',
+      title: {
+        first: 'Class',
+        highlight: 'Diary',
+      },
+      quote: '"Teaching is embroidering knowledge into someone else’s heart."',
+      calendar: {
+        month: 'April',
+        year: '2026',
+        status: 'Open Schedule',
+        weekdays: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+        legend: {
+          inPerson: 'In-person workshops',
+          special: 'Special events',
+          online: 'Online mentorship',
+        },
+        events: [
+          { day: 5, title: 'Foundations', type: 'workshop' },
+          { day: 12, title: 'Artisan’s Dream', type: 'special' },
+          { day: 20, title: '3D Stitches', type: 'workshop' },
+          { day: 26, title: 'Mentorship', type: 'online' },
+        ],
+      },
+      highlight: {
+        badge: 'Highlight of the Month',
+        title: 'The Artisan’s Dream',
+        subtitle: 'April Special Edition',
+        description: 'A magical gathering in a historical venue. We’ll explore three-dimensional flowers while sharing stories and a charming colonial coffee break.',
+        date: 'April 12, Saturday',
+        time: '2 p.m. to 6 p.m.',
+        location: 'Artisan’s Dream Space – Downtown',
+        cta: 'Save my seat',
+        whatsappMessage: 'I want details about the Artisan’s Dream workshop!',
+      },
+      otherClassesTitle: 'Other Sessions',
+      otherClasses: [
+        {
+          title: 'Freehand Embroidery 101',
+          description: 'Perfect for your very first stitches.',
+          chips: ['04/05 – In person', 'Materials Included'],
+          imageAlt: 'Beginners',
+        },
+        {
+          title: 'Botanical & 3D Textures',
+          description: 'For embroiderers who want to level up.',
+          chips: ['04/20 – In person', 'Intermediate Level'],
+          imageAlt: '3D Stitches',
+        },
+      ],
+      beyond: {
+        eyebrow: 'Beyond the Atelier',
+        title: 'Bring Margarida to your world',
+        description: 'I design bespoke manual experiences for brands, companies, and events anywhere in Brazil.',
+        cards: {
+          corporate: {
+            title: 'Wellness & Corporate',
+            description: 'Creative unwinding workshops for teams. Supporting mental health and team bonding through handcrafting.',
+          },
+          retail: {
+            title: 'Brand Experience',
+            description: 'In-store activations, collection launches, and live personalization to enchant your audience.',
+          },
+          travel: {
+            title: 'Margarida Tour',
+            description: 'Want the course in your city? Gather a group and I’ll bring all materials and knowledge.',
+          },
+        },
+        cta: 'Request a proposal',
+      },
+      faq: {
+        title: 'Frequently Asked',
+        questions: [
+          {
+            question: 'Do I need to bring supplies?',
+            answer: 'No! In-person classes include the full kit for you to take home.',
+          },
+          {
+            question: 'What if I miss a class?',
+            answer: 'Let me know 48 hours ahead and we’ll reschedule you for the next available group.',
+          },
+        ],
+      },
+    },
+    privacyPage: {
+      title: 'Privacy Policy',
+      updatedAt: 'Last update: April 2026',
+      intro: 'Your privacy matters as much as the quality of our stitches. At Margarida Bordada we handle your data with transparency, respect, and care.',
+      sections: [
+        {
+          title: '1. Information We Collect',
+          body: 'We only collect the information needed to process your requests: name, contact (phone/WhatsApp), and details you voluntarily share in the quote form. We do not sell or share your data for marketing purposes.',
+        },
+        {
+          title: '2. How We Use Your Data',
+          body: 'Your information is used exclusively to:',
+          list: [
+            'Respond to your quote requests.',
+            'Process and deliver your handmade pieces.',
+            'Share updates about order status or news (only if you opted in).',
+          ],
+        },
+        {
+          title: '3. Creative Assistant (AI)',
+          body: 'When you use our Creative Assistant, the text you provide is processed to generate suggestions. We do not permanently store your ideas tied to personal identifiers.',
+        },
+        {
+          title: '4. Your Rights',
+          body: 'You may request deletion or changes to your data at any time. Email contato@margaridabordada.com and we will assist you.',
+        },
+      ],
+      signature: 'Paula Brasil',
+      footer: 'Margarida Bordada © All rights reserved',
+    },
+    cookiesPage: {
+      title: 'Cookie Policy',
+      eyebrow: 'Digital Transparency',
+      intro: 'We use cookies to make sure you enjoy the best experience. Cookies are small text files stored on your device when you visit our digital atelier.',
+      sections: [
+        {
+          title: 'Which cookies do we use?',
+          items: [
+            {
+              title: 'Essential',
+              description: 'Required for the site to work properly, such as remembering basic browsing preferences.',
+            },
+            {
+              title: 'Performance & Analytics',
+              description: 'They help us understand how visitors interact with the site (which pages are most viewed) anonymously so we can constantly improve.',
+            },
+          ],
+        },
+        {
+          title: 'Managing cookies',
+          body: 'You can disable cookies in your browser settings at any time. Keep in mind that some features (like the Creative Assistant) may not work perfectly without them.',
+        },
+      ],
+      footer: 'Margarida Bordada – Handmade with care',
+    },
+    cookieBanner: {
+      message: 'We use cookies to sweeten your experience.',
+      detail: 'By continuing to browse you agree to our Privacy Policy and the use of cookies to enhance site performance.',
+      action: 'Accept and Continue',
+    },
+    backToTop: {
+      ariaLabel: 'Back to top',
     },
     contact: {
-      greeting: "Let's talk?",
+      greeting: "Shall we talk?",
       title: 'Transform your memory',
       titleEnd: 'into embroidery.',
-      description: 'The schedule is open for new stories. Click below to start your personalized project.',
+      description: 'The schedule is open for new stories. Click below to start your tailored project.',
       whatsapp: 'Message on WhatsApp',
       instagram: '@margaridabordada',
       gallery: 'Gallery',
@@ -123,7 +659,7 @@ export const translations = {
     footer: {
       madeBy: 'Made by hand with',
       by: 'by',
-    }
+    },
   },
   es: {
     navbar: {
@@ -159,16 +695,284 @@ export const translations = {
       closeModal: 'Cerrar',
       buyNow: 'Comprar',
       inquire: 'Consultar',
+      viewMoreInstagram: 'Ver más en Instagram @margaridabordada',
+      securePurchase: {
+        prefix: 'Compra segura por',
+        whatsapp: 'WhatsApp',
+        nuvemshop: 'Nuvemshop',
+      },
       categories: {
         all: 'Todas',
         bastidor: 'Bastidor',
         paisagem: 'Paisaje',
-        botanico: 'Botánico',
+        botanico: 'Colección Botánica',
         decoracao: 'Decoración',
-        delicado: 'Delicado',
-        processo: 'Proceso',
+        delicado: 'Diseños Delicados',
+        processo: 'Proceso Creativo',
         textura: 'Textura',
-      }
+      },
+    },
+    aiAssistant: {
+      title: 'Tu Idea, Mis Manos',
+      subtitle: '¿No sabes por dónde empezar? Cuéntale a mi "Asistente Creativa" (IA) lo que sientes y ella dibujará el concepto con palabras y colores.',
+      diaryLabel: 'Querido diario de bordado...',
+      placeholder: 'Ej.: Quiero regalarle a mi abuela algo que recuerde a su jardín, con colores suaves y quizás un colibrí...',
+      clear: 'Limpiar',
+      submit: {
+        idle: 'Materializar Idea',
+        loading: 'Creando...',
+      },
+      error: 'La inspiración está tímida ahora. Intenta de nuevo en unos instantes.',
+      result: {
+        title: 'El Concepto',
+        paletteTitle: 'Paleta Sugerida',
+        stitchesTitle: 'Puntadas Técnicas',
+        copy: 'Copiar para Encargo',
+        copySuccess: '¡Notas copiadas! Pégalas en nuestro WhatsApp.',
+      },
+      whatsappPrefill: {
+        intro: '¡Hola Paula! Usé el asistente del sitio y me encantó esta idea:',
+        concept: '*Concepto:*',
+        colors: '*Colores:*',
+        stitches: '*Puntadas:*',
+      },
+    },
+    workshopTeaser: {
+      badge: 'Últimos Cupos',
+      title: 'Workshop: Sueño del Artesano',
+      dateLabel: 'Cuándo',
+      dateValue: '12 de Abril',
+      locationLabel: 'Dónde',
+      locationValue: 'Centro Histórico',
+      mobileDate: '12/04',
+      mobileLocation: 'Centro',
+      cta: 'Ver Agenda',
+      close: 'Cerrar aviso',
+    },
+    workshopsHome: {
+      badge: 'Agenda 2026',
+      heading: 'Enseñar & Compartir',
+      subtitle: 'Más que técnica, el bordado es terapia. Ven a simplificar los puntos en encuentros presenciales llenos de afecto.',
+      ticket: {
+        ribbon: 'Próximo Grupo',
+        highlightTitleLine1: 'Iniciación al',
+        highlightTitleLine2: 'Bordado Libre',
+        statusLabel: 'Lugar Confirmado',
+        statusBadge: 'Cupos Limitados',
+        title: 'El Sueño del Artesano',
+        description: 'Un espacio mágico para crear juntas.',
+        details: {
+          whenLabel: 'Cuándo',
+          whenValue: 'Sábado 20 de Abril',
+          scheduleLabel: 'Horario',
+          scheduleValue: 'De 14h a 18h',
+        },
+        includesTitle: 'Incluye:',
+        includes: ['Kit completo', 'Manual digital', 'Diseño exclusivo', 'Coffee break'],
+        whatsappMessage: '¡Hola! Quiero inscribirme en el workshop Sueño del Artesano.',
+        cta: 'Reservar mi cupo',
+      },
+      footer: {
+        prompt: '¿Quieres llevar el workshop a tu ciudad?',
+        link: 'Escríbeme',
+      },
+    },
+    orderPage: {
+      badge: 'Presupuesto Personalizado',
+      title: 'Vamos a crear algo',
+      highlight: 'único?',
+      intro: 'Cada bordado es un viaje. Completa los datos para que pueda entender tu visión y transformar tu memoria en arte textil.',
+      cards: {
+        references: {
+          title: 'Envía Referencias',
+          description: 'Fotos, colores o la historia que quieres contar.',
+        },
+        timeline: {
+          title: 'Plazo de Producción',
+          description: 'Piezas exclusivas tardan de 15 a 30 días en estar listas.',
+        },
+      },
+      quote: '"El amor está en los detalles."',
+      form: {
+        title: 'Detalles del Pedido',
+        nameLabel: 'Tu Nombre',
+        namePlaceholder: '¿Cómo prefieres que te llame?',
+        contactLabel: 'WhatsApp / Email',
+        contactPlaceholder: '(00) 00000-0000',
+        typeLabel: 'Tipo de Pieza',
+        typeOptions: {
+          bastidor: 'Bastidor Decorativo',
+          portaAlianca: 'Bastidor Porta Alianzas',
+          flamula: 'Bandera Decorativa',
+          roupa: 'Personalización en Prenda',
+          outro: 'Otra (Describe)',
+        },
+        dateLabel: 'Fecha Límite (Opcional)',
+        uploadLabel: 'Referencia Visual (Opcional)',
+        uploadPrompt: 'Haz clic para añadir una foto',
+        uploadSelected: 'Imagen seleccionada',
+        uploadHint: '* Deberás enviar la imagen por WhatsApp después de solicitar.',
+        ideaLabel: 'Tu Idea',
+        ideaPlaceholder: 'Cuéntame lo que imaginas. Colores, elementos, frases...',
+        ideaHint: 'Tip: Usa la Asistente Creativa en la Home si necesitas ayuda.',
+        submit: 'Solicitar Presupuesto',
+        responseTime: 'Respuesta en un plazo de 24h hábiles',
+        whatsapp: {
+          greeting: 'Hola Paula, quiero solicitar un presupuesto.',
+          nameLabel: '*Nombre:*',
+          typeLabel: '*Pieza:*',
+          dateLabel: '*Fecha ideal:*',
+          ideaLabel: '*Idea:*',
+          attachment: '📸 *Referencia:* Tengo una imagen para enviar ({fileName}). La adjunto por el chat.',
+        },
+      },
+    },
+    workshopsPage: {
+      eyebrow: 'Educación & Comunidad',
+      title: {
+        first: 'Diario de',
+        highlight: 'Clases',
+      },
+      quote: '"Enseñar es bordar el conocimiento en el corazón del otro."',
+      calendar: {
+        month: 'Abril',
+        year: '2026',
+        status: 'Agenda Abierta',
+        weekdays: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+        legend: {
+          inPerson: 'Talleres Presenciales',
+          special: 'Eventos Especiales',
+          online: 'Mentorías Online',
+        },
+        events: [
+          { day: 5, title: 'Iniciación', type: 'workshop' },
+          { day: 12, title: 'Sueño del Artesano', type: 'special' },
+          { day: 20, title: 'Puntos 3D', type: 'workshop' },
+          { day: 26, title: 'Mentoría', type: 'online' },
+        ],
+      },
+      highlight: {
+        badge: 'Destacado del Mes',
+        title: 'El Sueño del Artesano',
+        subtitle: 'Edición Especial de Abril',
+        description: 'Un encuentro mágico en un lugar histórico. Aprenderemos flores tridimensionales mientras compartimos historias y un café colonial inolvidable.',
+        date: '12 de Abril, Sábado',
+        time: '14h a 18h',
+        location: 'Espacio Sueño del Artesano - Centro',
+        cta: 'Reservar mi cupo',
+        whatsappMessage: 'Quiero más detalles del workshop Sueño del Artesano.',
+      },
+      otherClassesTitle: 'Otras Sesiones',
+      otherClasses: [
+        {
+          title: 'Iniciación al Bordado Libre',
+          description: 'Perfecto para tus primeras puntadas.',
+          chips: ['05/04 - Presencial', 'Material Incluido'],
+          imageAlt: 'Principiantes',
+        },
+        {
+          title: 'Botánica y Texturas 3D',
+          description: 'Para bordadoras que quieren avanzar.',
+          chips: ['20/04 - Presencial', 'Nivel Intermedio'],
+          imageAlt: 'Puntos 3D',
+        },
+      ],
+      beyond: {
+        eyebrow: 'Más allá del Taller',
+        title: 'Lleva a Margarida a tu mundo',
+        description: 'Creo experiencias manuales personalizadas para marcas, empresas y eventos en cualquier lugar de Brasil.',
+        cards: {
+          corporate: {
+            title: 'Wellness & Corporate',
+            description: 'Workshops de descompresión creativa para equipos. Bienestar y unión a través del hacer manual.',
+          },
+          retail: {
+            title: 'Brand Experience',
+            description: 'Activaciones en tiendas, lanzamientos y personalización en vivo para encantar a tu público.',
+          },
+          travel: {
+            title: 'Margarida Tour',
+            description: '¿Quieres el curso en tu ciudad? Reúne un grupo y llevo todos los materiales.',
+          },
+        },
+        cta: 'Solicitar propuesta comercial',
+      },
+      faq: {
+        title: 'Preguntas Frecuentes',
+        questions: [
+          {
+            question: '¿Debo llevar materiales?',
+            answer: 'No. En los talleres presenciales el kit completo está incluido y es para ti.',
+          },
+          {
+            question: '¿Y si no puedo asistir?',
+            answer: 'Avisando con 48h de anticipación reprogramamos tu cupo para la próxima edición.',
+          },
+        ],
+      },
+    },
+    privacyPage: {
+      title: 'Política de Privacidad',
+      updatedAt: 'Última actualización: Abril 2026',
+      intro: 'Tu privacidad es tan importante como la calidad de nuestros bordados. En Margarida Bordada tratamos tus datos con transparencia, respeto y cuidado.',
+      sections: [
+        {
+          title: '1. Información que recopilamos',
+          body: 'Solo recolectamos los datos esenciales para procesar tus pedidos: nombre, contacto (teléfono/WhatsApp) y detalles que compartes voluntariamente en el formulario. No vendemos ni compartimos tu información con fines de marketing.',
+        },
+        {
+          title: '2. Uso de los datos',
+          body: 'Tus datos se utilizan exclusivamente para:',
+          list: [
+            'Responder tus solicitudes de presupuesto.',
+            'Procesar y enviar tus piezas bordadas.',
+            'Compartir actualizaciones sobre el estado del pedido o novedades (si aceptaste recibirlas).',
+          ],
+        },
+        {
+          title: '3. Asistente Creativa (IA)',
+          body: 'Al usar la Asistente Creativa, el texto que escribes se procesa para generar sugerencias. No almacenamos tus ideas de forma permanente vinculadas a tu identidad.',
+        },
+        {
+          title: '4. Tus derechos',
+          body: 'Puedes solicitar la eliminación o modificación de tus datos en cualquier momento. Escríbenos a contato@margaridabordada.com y te ayudaremos.',
+        },
+      ],
+      signature: 'Paula Brasil',
+      footer: 'Margarida Bordada © Todos los derechos reservados',
+    },
+    cookiesPage: {
+      title: 'Política de Cookies',
+      eyebrow: 'Transparencia Digital',
+      intro: 'Este sitio utiliza cookies para garantizar la mejor experiencia posible. Son pequeños archivos de texto que se guardan en tu dispositivo cuando visitas nuestro atelier digital.',
+      sections: [
+        {
+          title: '¿Qué tipos de cookies usamos?',
+          items: [
+            {
+              title: 'Esenciales',
+              description: 'Necesarias para que el sitio funcione correctamente, como recordar tus preferencias básicas de navegación.',
+            },
+            {
+              title: 'Rendimiento y Análisis',
+              description: 'Nos ayudan a entender cómo interactúan los visitantes con el sitio (qué páginas se visitan más) de forma anónima para mejorar continuamente.',
+            },
+          ],
+        },
+        {
+          title: 'Gestión',
+          body: 'Puedes desactivar los cookies en la configuración de tu navegador en cualquier momento. Ten en cuenta que algunas funciones (como la Asistente Creativa) pueden no funcionar perfectamente sin ellos.',
+        },
+      ],
+      footer: 'Margarida Bordada - Hecho a mano con cariño',
+    },
+    cookieBanner: {
+      message: 'Usamos cookies para hacer tu experiencia más dulce.',
+      detail: 'Al continuar navegando aceptas nuestra Política de Privacidad y el uso de cookies para mejorar el rendimiento del sitio.',
+      action: 'Aceptar y Continuar',
+    },
+    backToTop: {
+      ariaLabel: 'Volver arriba',
     },
     contact: {
       greeting: '¿Hablamos?',
@@ -186,8 +990,8 @@ export const translations = {
     footer: {
       madeBy: 'Hecho a mano con',
       by: 'por',
-    }
-  }
+    },
+  },
 } as const;
 
 export type TranslationKeys = typeof translations.pt;

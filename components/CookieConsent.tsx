@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Cookie } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 const CookieConsent: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const consent = localStorage.getItem('margarida-cookie-consent');
@@ -28,10 +30,10 @@ const CookieConsent: React.FC = () => {
         
         <div className="flex-grow text-center md:text-left">
           <p className="font-serif text-forest-900 text-lg leading-tight">
-            Usamos cookies para deixar sua experiência mais doce.
+            {t.cookieBanner.message}
           </p>
           <p className="font-sans text-xs text-forest-600 mt-2">
-            Ao continuar navegando, você concorda com nossa Política de Privacidade e o uso de cookies para melhorar o desempenho do site.
+            {t.cookieBanner.detail}
           </p>
         </div>
 
@@ -39,7 +41,7 @@ const CookieConsent: React.FC = () => {
           onClick={handleAccept}
           className="whitespace-nowrap bg-forest-900 text-linen px-8 py-3 rounded-full font-sans text-xs font-bold uppercase tracking-widest hover:bg-rose-500 transition-colors shadow-lg hover:shadow-rose-500/20"
         >
-          Aceitar e Continuar
+          {t.cookieBanner.action}
         </button>
       </div>
     </div>

@@ -7,7 +7,7 @@ import { useTranslation } from '../hooks/useTranslation';
 const galleryItems: GalleryItem[] = [
   { 
     id: 1, 
-    category: 'Bastidor', 
+    category: 'bastidor', 
     title: 'Detalhes Florais', 
     imageUrl: 'https://i.imgur.com/Dc1PG1T.jpeg',
     price: 'R$ 189,90',
@@ -16,7 +16,7 @@ const galleryItems: GalleryItem[] = [
   },
   { 
     id: 2, 
-    category: 'Paisagem', 
+    category: 'paisagem', 
     title: 'Campos de Lavanda', 
     imageUrl: 'https://i.imgur.com/372USRj.jpeg',
     price: 'R$ 249,00',
@@ -25,7 +25,7 @@ const galleryItems: GalleryItem[] = [
   },
   { 
     id: 3, 
-    category: 'Botânico', 
+    category: 'botanico', 
     title: 'Folhagens', 
     imageUrl: 'https://i.imgur.com/cUJRskF.jpeg',
     price: 'R$ 159,00',
@@ -34,7 +34,7 @@ const galleryItems: GalleryItem[] = [
   },
   { 
     id: 4, 
-    category: 'Decoração', 
+    category: 'decoracao', 
     title: 'Composição de Parede', 
     imageUrl: 'https://i.imgur.com/8P3KZ5W.jpeg',
     price: 'Sob Consulta',
@@ -43,7 +43,7 @@ const galleryItems: GalleryItem[] = [
   },
   { 
     id: 5, 
-    category: 'Delicado', 
+    category: 'delicado', 
     title: 'Rosas Antigas', 
     imageUrl: 'https://i.imgur.com/nTle37p.jpeg',
     price: 'R$ 210,00',
@@ -52,7 +52,7 @@ const galleryItems: GalleryItem[] = [
   },
   { 
     id: 6, 
-    category: 'Processo', 
+    category: 'processo', 
     title: 'Mesa de Trabalho', 
     imageUrl: 'https://i.imgur.com/cqX2s6j.jpeg',
     price: null, // Apenas portfólio
@@ -60,7 +60,7 @@ const galleryItems: GalleryItem[] = [
   },
   { 
     id: 7, 
-    category: 'Textura', 
+    category: 'textura', 
     title: 'Ponto Cheio', 
     imageUrl: 'https://i.imgur.com/STywnPX.jpeg',
     price: 'R$ 175,00',
@@ -72,6 +72,11 @@ const galleryItems: GalleryItem[] = [
 const Gallery: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
   const { t } = useTranslation();
+  const getCategoryLabel = (category: GalleryItem['category']) => t.gallery.categories[category] ?? category;
+  const getSecurePlatform = (url?: string) => {
+    if (!url) return t.gallery.securePurchase.nuvemshop;
+    return url.includes('wa.me') ? t.gallery.securePurchase.whatsapp : t.gallery.securePurchase.nuvemshop;
+  };
 
   return (
     <section id="gallery" className="py-24 relative bg-linen">
@@ -112,7 +117,7 @@ const Gallery: React.FC = () => {
               </div>
               
               <div className="pt-4 px-2 pb-2 text-center mt-auto">
-                 <p className="font-sans text-xs tracking-widest text-rose-500 uppercase mb-1">{item.category}</p>
+                 <p className="font-sans text-xs tracking-widest text-rose-500 uppercase mb-1">{getCategoryLabel(item.category)}</p>
                  <h3 className="font-serif text-2xl text-forest-900 italic">{item.title}</h3>
                  {item.price && (
                      <p className="font-sans text-sm font-medium text-forest-500 mt-1">{item.price}</p>
@@ -125,7 +130,7 @@ const Gallery: React.FC = () => {
         <div className="mt-20 text-center">
             <a href="https://instagram.com/margaridabordada" target="_blank" rel="noreferrer" className="inline-block group">
                 <span className="font-serif text-2xl text-forest-900 border-b border-rose-300 pb-1 group-hover:text-rose-600 transition-colors">
-                  Ver mais no Instagram @margaridabordada
+                  {t.gallery.viewMoreInstagram}
                 </span>
             </a>
         </div>
@@ -163,7 +168,7 @@ const Gallery: React.FC = () => {
                 {/* Details Section */}
                 <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]">
                     <span className="font-sans text-xs font-bold uppercase tracking-widest text-rose-500 mb-2">
-                        {selectedItem.category}
+                      {getCategoryLabel(selectedItem.category)}
                     </span>
                     <h3 className="font-serif text-4xl md:text-5xl text-forest-900 mb-4 leading-none">
                         {selectedItem.title}
@@ -203,8 +208,8 @@ const Gallery: React.FC = () => {
                         
                         <div className="text-center pt-2">
                             <span className="text-xs font-sans text-forest-400 uppercase tracking-widest flex items-center justify-center gap-2">
-                                <ExternalLink size={12} />
-                                Compra Segura via {selectedItem.shopUrl?.includes('wa.me') ? 'WhatsApp' : 'Nuvemshop'}
+                              <ExternalLink size={12} />
+                              {t.gallery.securePurchase.prefix} {getSecurePlatform(selectedItem.shopUrl)}
                             </span>
                         </div>
                     </div>

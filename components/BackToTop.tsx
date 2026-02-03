@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 const BackToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -28,7 +30,7 @@ const BackToTop: React.FC = () => {
   return (
     <button
       onClick={scrollToTop}
-      aria-label="Voltar ao topo"
+      aria-label={t.backToTop.ariaLabel}
       className={`fixed bottom-6 right-6 md:bottom-10 md:right-10 z-40 p-3 rounded-full border border-forest-900/10 
         backdrop-blur-sm bg-white/40 text-forest-900 shadow-sm
         hover:bg-forest-900 hover:text-linen hover:border-transparent hover:shadow-xl hover:-translate-y-1

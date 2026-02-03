@@ -1,8 +1,12 @@
+import type { TranslationKeys } from './locales/translations';
+
+export type GalleryCategoryKey = keyof TranslationKeys['gallery']['categories'];
+
 export interface GalleryItem {
   id: number;
   imageUrl: string;
   title: string;
-  category: string;
+  category: GalleryCategoryKey;
   price?: string;
   shopUrl?: string;
   description?: string;
