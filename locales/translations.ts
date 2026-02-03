@@ -18,7 +18,7 @@ export const translations = {
       greeting: 'Olá, eu sou a',
       name: 'Paula Brasil',
       intro: 'Bem-vindo ao meu mundo de linhas e texturas. O',
-      brandName: 'Margarida Bordadeira',
+      brandName: 'Margarida Bordada',
       introEnd: 'nasceu da necessidade de desacelerar em um mundo que não para.',
       belief: 'Acredito que o bordado é uma forma de linguagem. Seja para eternizar o buquê do seu casamento, anunciar a chegada de um bebê ou presentear alguém amado, cada ponto é feito manualmente com intenção e calma.',
       technique: 'Técnica',
@@ -252,7 +252,7 @@ export const translations = {
     privacyPage: {
       title: 'Política de Privacidade',
       updatedAt: 'Última atualização: Abril de 2026',
-      intro: 'A sua privacidade é tão importante quanto a qualidade dos nossos bordados. Na Margarida Bordadeira, tratamos seus dados com transparência, respeito e cuidado.',
+      intro: 'A sua privacidade é tão importante quanto a qualidade dos nossos bordados. Na Margarida Bordada, tratamos seus dados com transparência, respeito e cuidado.',
       sections: [
         {
           title: '1. Coleta de Informações',
@@ -277,7 +277,7 @@ export const translations = {
         },
       ],
       signature: 'Paula Brasil',
-      footer: 'Margarida Bordadeira © Todos os direitos reservados',
+      footer: 'Margarida Bordada © Todos os direitos reservados',
     },
     cookiesPage: {
       title: 'Política de Cookies',
@@ -302,7 +302,7 @@ export const translations = {
           body: 'Você pode optar por desativar os cookies nas configurações do seu navegador a qualquer momento. No entanto, observe que algumas funcionalidades do site (como o Assistente Criativo) podem não funcionar perfeitamente sem eles.',
         },
       ],
-      footer: 'Margarida Bordadeira - Feito à mão e com carinho',
+      footer: 'Margarida Bordada - Feito à mão e com carinho',
     },
     cookieBanner: {
       message: 'Usamos cookies para deixar sua experiência mais doce.',
@@ -349,7 +349,7 @@ export const translations = {
       greeting: 'Hello, I am',
       name: 'Paula Brasil',
       intro: 'Welcome to my world of threads and textures.',
-      brandName: 'Margarida Bordadeira',
+      brandName: 'Margarida Bordada',
       introEnd: 'was born from the need to slow down in a world that never stops.',
       belief: 'I believe embroidery is a form of language. Whether to eternalize your wedding bouquet, announce the arrival of a baby, or gift someone loved, each stitch is made by hand with intention and calm.',
       technique: 'Technique',
@@ -583,7 +583,7 @@ export const translations = {
     privacyPage: {
       title: 'Privacy Policy',
       updatedAt: 'Last update: April 2026',
-      intro: 'Your privacy matters as much as the quality of our stitches. At Margarida Bordadeira we handle your data with transparency, respect, and care.',
+      intro: 'Your privacy matters as much as the quality of our stitches. At Margarida Bordada we handle your data with transparency, respect, and care.',
       sections: [
         {
           title: '1. Information We Collect',
@@ -608,7 +608,7 @@ export const translations = {
         },
       ],
       signature: 'Paula Brasil',
-      footer: 'Margarida Bordadeira © All rights reserved',
+      footer: 'Margarida Bordada © All rights reserved',
     },
     cookiesPage: {
       title: 'Cookie Policy',
@@ -633,7 +633,7 @@ export const translations = {
           body: 'You can disable cookies in your browser settings at any time. Keep in mind that some features (like the Creative Assistant) may not work perfectly without them.',
         },
       ],
-      footer: 'Margarida Bordadeira – Handmade with care',
+      footer: 'Margarida Bordada – Handmade with care',
     },
     cookieBanner: {
       message: 'We use cookies to sweeten your experience.',
@@ -680,7 +680,7 @@ export const translations = {
       greeting: 'Hola, soy',
       name: 'Paula Brasil',
       intro: 'Bienvenido a mi mundo de hilos y texturas.',
-      brandName: 'Margarida Bordadeira',
+      brandName: 'Margarida Bordada',
       introEnd: 'nació de la necesidad de desacelerar en un mundo que no se detiene.',
       belief: 'Creo que el bordado es una forma de lenguaje. Ya sea para eternizar el ramo de tu boda, anunciar la llegada de un bebé o regalar a alguien amado, cada puntada se hace a mano con intención y calma.',
       technique: 'Técnica',
@@ -914,7 +914,7 @@ export const translations = {
     privacyPage: {
       title: 'Política de Privacidad',
       updatedAt: 'Última actualización: Abril 2026',
-      intro: 'Tu privacidad es tan importante como la calidad de nuestros bordados. En Margarida Bordadeira tratamos tus datos con transparencia, respeto y cuidado.',
+      intro: 'Tu privacidad es tan importante como la calidad de nuestros bordados. En Margarida Bordada tratamos tus datos con transparencia, respeto y cuidado.',
       sections: [
         {
           title: '1. Información que recopilamos',
@@ -939,7 +939,7 @@ export const translations = {
         },
       ],
       signature: 'Paula Brasil',
-      footer: 'Margarida Bordadeira © Todos los derechos reservados',
+      footer: 'Margarida Bordada © Todos los derechos reservados',
     },
     cookiesPage: {
       title: 'Política de Cookies',
@@ -964,7 +964,7 @@ export const translations = {
           body: 'Puedes desactivar los cookies en la configuración de tu navegador en cualquier momento. Ten en cuenta que algunas funciones (como la Asistente Creativa) pueden no funcionar perfectamente sin ellos.',
         },
       ],
-      footer: 'Margarida Bordadeira - Hecho a mano con cariño',
+      footer: 'Margarida Bordada - Hecho a mano con cariño',
     },
     cookieBanner: {
       message: 'Usamos cookies para hacer tu experiencia más dulce.',

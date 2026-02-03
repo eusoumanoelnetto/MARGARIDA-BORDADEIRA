@@ -45,7 +45,7 @@ const CookiesPage: React.FC = () => {
             </div>
 
             <div className="mt-16 pt-8 border-t border-dashed border-stone-200 text-center">
-                <p className="text-xs font-sans text-stone-400 uppercase tracking-widest">Margarida Bordadeira - Feito à mão e com carinho</p>
+                <p className="text-xs font-sans text-stone-400 uppercase tracking-widest">Margarida Bordada - Feito à mão e com carinho</p>
             </div>
         </div>
       </div>

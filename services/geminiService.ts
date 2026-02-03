@@ -21,7 +21,7 @@ export const generateEmbroideryIdea = async (userInput: string): Promise<AIRespo
   const model = "gemini-3-flash-preview";
   
   const prompt = `
-    You are an expert embroidery artist and creative consultant for "Margarida Bordadeira".
+    You are an expert embroidery artist and creative consultant for "Margarida Bordada".
     The user has a vague idea for a custom embroidery piece. Your goal is to turn this idea into a detailed, artistic description that they can send to the embroiderer.
     
     User Idea: "${userInput}"
