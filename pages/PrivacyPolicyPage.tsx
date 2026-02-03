@@ -20,7 +20,7 @@ const PrivacyPolicyPage: React.FC = () => {
 
             <div className="prose prose-stone prose-lg max-w-none font-serif text-forest-800/80 leading-relaxed space-y-8">
                 <p>
-                    A sua privacidade é tão importante quanto a qualidade dos nossos bordados. Na Margarida Bordada, tratamos seus dados com transparência, respeito e cuidado.
+                    A sua privacidade é tão importante quanto a qualidade dos nossos bordados. Na Margarida Bordadeira, tratamos seus dados com transparência, respeito e cuidado.
                 </p>
 
                 <div>
@@ -59,7 +59,7 @@ const PrivacyPolicyPage: React.FC = () => {
 
             <div className="mt-16 pt-8 border-t border-dashed border-stone-200 text-center">
                 <p className="font-script text-3xl text-rose-500">Paula Brasil</p>
-                <p className="text-xs font-sans text-stone-400 mt-2 uppercase tracking-widest">Margarida Bordada © Todos os direitos reservados</p>
+                <p className="text-xs font-sans text-stone-400 mt-2 uppercase tracking-widest">Margarida Bordadeira © Todos os direitos reservados</p>
             </div>
         </div>
       </div>
